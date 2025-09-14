@@ -1,7 +1,16 @@
+"use client";
+import {useSettingsContext} from "@/context/settings/settings-context";
 import React from "react";
 
 const MainPage = () => {
-  return <div>MainPage</div>;
+  const {
+    settings: {theme},
+  } = useSettingsContext();
+  return (
+    <>
+      <h1>{theme}</h1>
+    </>
+  );
 };
 
 export default MainPage;

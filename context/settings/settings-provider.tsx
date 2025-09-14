@@ -9,7 +9,10 @@ interface SettingsContextProviderProps {
 export const SettingsContextProvider = ({
   children,
 }: SettingsContextProviderProps) => {
-  const [settings, setSettings] = useState({theme: "light"});
+  const [settings, setSettings] = useState({
+    theme: "light",
+    isSideBarOpen: false,
+  });
   return (
     <SettingsContext.Provider value={{settings, setSettings}}>
       {children}
