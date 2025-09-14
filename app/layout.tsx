@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
-import StyledComponentsRegistry from "./lib/AntRegistry";
+import StyledComponentsRegistry from "../lib/AntRegistry";
 import {ClerkProvider} from "@clerk/nextjs";
 
 const geistSans = Geist({
@@ -25,7 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        signIn: {
+          variables: {colorPrimary: "#f9aa11"},
+        },
+        signUp: {
+          variables: {colorPrimary: "#f9aa11"},
+        },
+      }}
+    >
       <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
