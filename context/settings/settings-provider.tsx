@@ -10,7 +10,7 @@ export const SettingsContextProvider = ({
   children,
 }: SettingsContextProviderProps) => {
   const [settings, setSettings] = useState({
-    theme: "light",
+    theme: "dark",
     isSideBarOpen: false,
   });
   return (

@@ -2,20 +2,12 @@
 
 import {useSettingsContext} from "@/context/settings/settings-context";
 import {ConfigProvider, theme} from "antd";
-// import {useCallback} from "react";
+import React from "react";
 
 const ThemeProvider = ({children}: {children: React.ReactNode}) => {
   const {
     settings: {theme: globalTheme},
   } = useSettingsContext();
-
-  // const BoxBg = useCallback(() => {
-  //   return globalTheme === "dark" ? "rgb(33, 43, 54)" : "white";
-  // }, [globalTheme]);
-
-  // const BaseBg = useCallback(() => {
-  //   return globalTheme === "dark" ? "black" : "#F4F6F8";
-  // }, [globalTheme]);
 
   return (
     <ConfigProvider
@@ -27,16 +19,9 @@ const ThemeProvider = ({children}: {children: React.ReactNode}) => {
         token: {
           fontFamily: "inherit",
           colorPrimary: "#f9aa11",
-          // boxBg: BoxBg(),
-          // baseBg: BaseBg(),
+          // Không truyền boxBg, baseBg vì không phải token hợp lệ
         },
-        // components: {
-        //   Typography: {
-        //     fontSize: "none",
-        //     lineHeight: "none",
-        //     fontWeightStrong: "none",
-        //   },
-        // },
+        // Không truyền Typography nếu không custom hợp lệ
       }}
     >
       {children}
