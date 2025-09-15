@@ -28,7 +28,7 @@ const Sidebar = () => {
   } = useSettingsContext();
 
   const handleDrawerClose = useCallback(() => {
-    setSettings((prev) => ({...prev, sidebarOpen: false}));
+    setSettings((prev) => ({...prev, isSidebarOpen: false}));
   }, [setSettings]);
 
   const isActive = (route: SidebarRoute): string => {
@@ -41,7 +41,7 @@ const Sidebar = () => {
   };
   return (
     <SidebarContainer
-      isSidebarOpen={isSidebarOpen}
+      isDrawerOpen={isSidebarOpen}
       setIsDrawerOpen={handleDrawerClose}
     >
       <div className={style.wrapper}>

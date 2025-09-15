@@ -11,7 +11,7 @@ export const SettingsContextProvider = ({
 }: SettingsContextProviderProps) => {
   const [settings, setSettings] = useState({
     theme: "dark",
-    isSideBarOpen: false,
+    isSidebarOpen: true,
   });
   return (
     <SettingsContext.Provider value={{settings, setSettings}}>
