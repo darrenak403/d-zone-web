@@ -26,9 +26,11 @@ const SidebarContainer = ({
         height={"100%"}
         className={style.sidebarContainer}
       >
-        <div>{children}</div>
+        <div className={style.drawerContainer}>{children}</div>;
       </Drawer>
     );
+  } else {
+    return children;
   }
 };
 
