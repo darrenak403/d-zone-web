@@ -1,12 +1,12 @@
-export const sidebarRoutes = (user?: { id?: string }) => [
+export const sidebarRoutes = (user?: {id?: string}) => [
   {
     name: "home",
-    icon: "eva:home-file",
+    icon: "eva:home-fill",
     router: "/",
   },
   {
     name: "my profile",
-    icon: "bi:person-fill",
+    icon: "eva:person-fill",
     router: `/profile/${user?.id}`,
   },
   {
