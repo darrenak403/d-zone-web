@@ -20,6 +20,7 @@ const HomeLayout = ({children}: {children: React.ReactNode}) => {
             <Header />
             <div className={style.container}>
               <Sidebar />
+              <div className={style.page_body}>{children}</div>
             </div>
           </div>
         </Box>

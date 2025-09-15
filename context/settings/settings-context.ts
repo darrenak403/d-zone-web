@@ -3,9 +3,9 @@
 import {createContext, useContext} from "react";
 
 interface SettingsContextType {
-  settings: {theme: string};
+  settings: {theme: string; isSidebarOpen: boolean};
   setSettings: React.Dispatch<
-    React.SetStateAction<{theme: string; isSideBarOpen: boolean}>
+    React.SetStateAction<{theme: string; isSidebarOpen: boolean}>
   >;
 }
 

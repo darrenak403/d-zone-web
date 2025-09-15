@@ -8,7 +8,7 @@ const MainPage = () => {
   } = useSettingsContext();
   return (
     <>
-      <h1>{theme}</h1>
+      <h1>Hahaa</h1>
     </>
   );
 };

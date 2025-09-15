@@ -7,7 +7,7 @@ export const sidebarRoutes = (user?: {id?: string}) => [
   {
     name: "my profile",
     icon: "eva:person-fill",
-    router: `/profile/${user?.id}`,
+    router: `/profile`,
   },
   {
     name: "messages",

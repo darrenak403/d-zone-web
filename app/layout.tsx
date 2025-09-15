@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     "Create beautiful posts, share your thoughts, and connect with others.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 1,
+  userScalable: "no",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
