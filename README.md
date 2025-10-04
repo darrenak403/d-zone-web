@@ -20,11 +20,9 @@ A small learning project to understand Next.js App Router, authentication and la
 
 ## Screenshots
 
-```md
 ![Screenshot 1](https://github.com/darrenak403/d-zone-web/blob/main/screenshots/Sign-in.png)
 ![Screenshot 2](https://github.com/darrenak403/d-zone-web/blob/main/screenshots/Lightmode.png)
 ![Screenshot 3](https://github.com/darrenak403/d-zone-web/blob/main/screenshots/Darkmode.png)
-```
 
 ## Learning outcomes
 
