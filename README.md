@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# D-Zone — Next.js Learning Project
 
-## Getting Started
+A small learning project to understand Next.js App Router, authentication and layout patterns.
 
-First, run the development server:
+## Goals
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Learn Next.js App Router: layout, nested layouts, pages, middleware
+- Implement authentication with Clerk
+- Build an optimal layout system (header, responsive sidebar → drawer)
+- Manage theme (light/dark) with Context + CSS Modules
+- Use TypeScript and Prisma for basic data modeling
+
+## Important notes
+
+- Authentication: Clerk handles sign-in, sign-out and user session. Middleware protects routes.
+- Layouts: Root `app/layout.tsx` provides global structure. Use nested layouts for app areas (e.g. `(app)` route group).
+- Sidebar behavior: Desktop shows persistent sidebar; below breakpoint it becomes a Drawer.
+- Theme: `SettingsContext` holds theme and sidebar state; `ThemeProvider` wraps Ant Design `ConfigProvider`.
+- Prisma + Supabase: Use pooler/direct URLs from Supabase dashboard. If shadow DB issues occur, consider setting `SHADOW_DATABASE_URL` or using `prisma db push`.
+
+## Screenshots
+
+```md
+![Screenshot 1](https://github.com/darrenak403/spotify-clone/blob/main/screenshots/Home.png)
+![Screenshot 2](https://github.com/darrenak403/spotify-clone/blob/main/screenshots/Dashboard.png)
+![Screenshot 3](https://github.com/darrenak403/spotify-clone/blob/main/screenshots/Chat%20RealTime.png)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Learning outcomes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Understand how Next.js App Router composes layouts and pages
+- Implement route protection and basic auth flows
+- Build responsive layout patterns and theme propagation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Short, focused learning repo — expand features as you practice.
